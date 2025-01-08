@@ -13,5 +13,10 @@ def knight_check(x1, y1, x2, y2):
 def queen_check(x1, y1, x2, y2):
     return abs(x1 - x2) == abs(y1 - y2) or x1 == x2 or y1 == y2
 
+def king_check(x1, y1, x2, y2):
+    ox = abs(x1 - x2)
+    oy = abs(y1 - y2)
 
-print(knight_check(2, 1, 4, 2))
+    return ox + oy <= 2
+
+print(king_check(2, 1, 2, 8))
